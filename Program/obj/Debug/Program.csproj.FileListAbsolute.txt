@@ -1,0 +1,24 @@
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\Program.exe.config
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\Program.exe
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\Program.pdb
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\ConsoleUI.dll
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\GarageLogic.dll
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\ConsoleUI.pdb
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\GarageLogic.pdb
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.csproj.CopyComplete
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.exe
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.pdb
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\Program.exe.config
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\Program.exe
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\Program.pdb
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\ConsoleUI.dll
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\GarageLogic.dll
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\ConsoleUI.pdb
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\bin\Debug\GarageLogic.pdb
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.csproj.CopyComplete
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.exe
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\Program\obj\Debug\Program.pdb

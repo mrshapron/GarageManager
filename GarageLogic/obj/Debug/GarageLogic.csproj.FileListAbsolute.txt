@@ -1,0 +1,12 @@
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.csproj.AssemblyReference.cache
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.csproj.CoreCompileInputs.cache
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\bin\Debug\GarageLogic.dll
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\bin\Debug\GarageLogic.pdb
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.dll
+C:\Users\adico\source\repos\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.pdb
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\bin\Debug\GarageLogic.dll
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\bin\Debug\GarageLogic.pdb
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.csproj.AssemblyReference.cache
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.csproj.CoreCompileInputs.cache
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.dll
+C:\Users\alont\Downloads\A24 Ex03 Adi 314075153 Sharon 318641693\A24 Ex03 Adi 314075153 Sharon 318641693\GarageLogic\obj\Debug\GarageLogic.pdb
