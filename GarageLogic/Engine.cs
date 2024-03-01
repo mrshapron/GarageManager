@@ -26,6 +26,12 @@ namespace GarageLogic
             };
             return dicParams;
         }
+        public override string ToString()
+        {
+            
+            string str = $"Current amount: {CurrentAmount}\n Max amount: {MaxAmount}\n";
+            return str;
+        }
         public virtual Dictionary<string, string> InitValues(Dictionary<string, string> i_DicValues)
         {
             bool isValidamount;

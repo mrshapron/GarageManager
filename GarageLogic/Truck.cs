@@ -23,6 +23,13 @@ namespace GarageLogic
                 Wheels.Add(Wheel);
             }
         }
+        public override string ToString()
+        {
+            string str = $"Carriage Capacity: {CarriageCapacity}\n is there Dangerous Materials : {isDangerousMaterials}\n";
+            StringBuilder stringBuilder = new StringBuilder(base.ToString());
+            stringBuilder.Append(str);
+            return str;
+        }
         public override void SetEngine(eEngineType i_EngineType)
         {
             FuelEngine FEngine = new FuelEngine();

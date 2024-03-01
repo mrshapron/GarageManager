@@ -10,12 +10,13 @@ namespace GarageLogic
     {
         public eFuelType FuelType { get; set; }
 
-        public void GetFuel(float NumOfLitters)
+        public void GetFuel(float i_NumOfLitters, eFuelType i_FuelType)
         {
-            this.CurrentAmount = NumOfLitters;
-            if (this.CurrentAmount > this.MaxAmount)
+            this.CurrentAmount = i_NumOfLitters;
+            if (this.CurrentAmount + i_NumOfLitters <= this.MaxAmount &&
+                i_FuelType == FuelType)
             {
-                this.CurrentAmount = this.MaxAmount;
+                this.CurrentAmount += i_NumOfLitters;
             }
         }
         public override string PrintParameters()
@@ -50,6 +51,13 @@ namespace GarageLogic
             }
             return errors;
 
+        }
+        public override string ToString()
+        {
+            string str = $"Fuel Type: {FuelType}\n";
+            StringBuilder stringBuilder = new StringBuilder(base.ToString());
+            stringBuilder.Append(str);
+            return str;
         }
 
     }

@@ -14,6 +14,8 @@ namespace Program
         {
             ConsoleUI.ConsoleUI consoleUI = new ConsoleUI.ConsoleUI();
             consoleUI.AddNewCar();
+            consoleUI.AddNewCar();
+            consoleUI.PrintVehicleData();
         }
     }
 }
