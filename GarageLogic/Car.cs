@@ -24,6 +24,7 @@ namespace GarageLogic
                 Wheels.Add(Wheel);
             }
         }
+        
         public override void SetEngine(eEngineType i_EngineType)
         {
             switch (i_EngineType)
@@ -79,6 +80,13 @@ namespace GarageLogic
             }
             return errors;
 
+        }
+        public override string ToString()
+        {
+            string str = $"Car color: {CarColor}\n Num of doors: {NumOfDoors}\n";
+            StringBuilder stringBuilder = new StringBuilder(base.ToString());
+            stringBuilder.Append(str);
+            return str;
         }
     }
     public enum eCarColor

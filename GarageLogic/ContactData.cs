@@ -12,9 +12,19 @@ namespace GarageLogic
         public string VehicleOwner { get; set; }
         public string OwnerPhoneNumber { get; set; }
         public eVehicleStatus VehicleStatus { get; set; }
+
+        public override string ToString()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("Contact Data:\n");
+            stringBuilder.AppendLine($"Owner Name: {VehicleOwner}\n");
+            stringBuilder.AppendLine($"Vehicle Status: {VehicleStatus}\n");
+            stringBuilder.AppendLine(Vehicle.ToString());
+            return stringBuilder.ToString();
+        }
     }
     public enum eVehicleStatus
     {
-        InProcess, Ready, Paid
+        InProcess=1, Ready, Paid, None
     }
 }

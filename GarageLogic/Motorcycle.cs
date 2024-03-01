@@ -48,6 +48,13 @@ namespace GarageLogic
             sb.AppendLine("LicenceType,EngineCapacity");
             return sb.ToString();
         }
+        public override string ToString()
+        {
+            string str = $"Licence Type: {LicenceType}\n Engine Capacity: {EngineCapacity}\n";
+            StringBuilder stringBuilder = new StringBuilder(base.ToString());
+            stringBuilder.Append(str);
+            return str;
+        }
         public override Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = base.GenerateParamsOutputs();

@@ -33,11 +33,12 @@ namespace GarageLogic
             // sb.AppendLine(VehicleWheel.PrintParameters());
             return sb.ToString();
         }
+
         public virtual Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = new Dictionary<string, string>
             {
-                { "ModelName", "Enter model of the vehicle" },
+                { "ModelName", string.empty },
 
             };
 
@@ -46,6 +47,7 @@ namespace GarageLogic
 
             return dicParams;
         }
+
         public virtual Dictionary<string, string> InitValues(Dictionary<string, string> i_DicValues)
         {
             if (i_DicValues.ContainsKey("ModelName"))
@@ -54,7 +56,23 @@ namespace GarageLogic
             }
             Dictionary<string, string> errors = Engine.InitValues(i_DicValues);
             return errors;
-            
+
+        }
+        public override string ToString()
+        {
+            int count = 1;
+            string str = $"Licence Number: {LicenceNumber}\n Model Name: {ModelName}\n Num of wheels:{NumOfWheels}";
+
+            StringBuilder stringBuilder = new StringBuilder(str);
+            foreach (VehicleWheel wheel in Wheels)
+            {
+                stringBuilder.Append($"wheel {count++}:\n");
+                stringBuilder.Append($"{wheel}\n");
+            }
+            stringBuilder.Append("Engine: \n");
+            stringBuilder.Append(Engine);
+
+            return stringBuilder.ToString();
         }
 
     }
