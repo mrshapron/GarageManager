@@ -13,9 +13,7 @@ namespace Program
         static void Main(string[] args)
         {
             ConsoleUI.ConsoleUI consoleUI = new ConsoleUI.ConsoleUI();
-            consoleUI.AddNewCar();
-            consoleUI.AddNewCar();
-            consoleUI.PrintVehicleData();
+            consoleUI.Start();
         }
     }
 }

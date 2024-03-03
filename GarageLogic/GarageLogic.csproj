@@ -41,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builder.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="ContactData.cs" />
     <Compile Include="ElectricEngine.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="FuelEngine.cs" />
     <Compile Include="Garage.cs" />
-    <Compile Include="IElectricVehicle.cs" />
     <Compile Include="IParamDictionary.cs" />
     <Compile Include="Truck.cs" />
+    <Compile Include="ValueOutOfRangeException.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Motorcycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleBuilder.cs" />
     <Compile Include="VehicleWheel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

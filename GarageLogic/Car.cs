@@ -18,13 +18,12 @@ namespace GarageLogic
 
         public override void SetWheels()
         {
-            for (int i = 0; i <= NumOfWheels; i++)
+            for (int i = 0; i < NumOfWheels; i++)
             {
                 VehicleWheel Wheel = new VehicleWheel(k_MaxPressureCar);
                 Wheels.Add(Wheel);
             }
         }
-        
         public override void SetEngine(eEngineType i_EngineType)
         {
             switch (i_EngineType)
@@ -43,22 +42,12 @@ namespace GarageLogic
 
             }
         }
-        public override string PrintParameters()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(base.PrintParameters());
-            sb.AppendLine("CarColor,NumOfDoors");
-            return sb.ToString();
-        }
+
         public override Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = base.GenerateParamsOutputs();
             dicParams.Add("CarColor", "Enter color of the car\n" +
-                 "1-blue\n" +
-                 "2- white" +
-                 "3-red" +
-                 "4-yellow");
-            dicParams.Add("NumOfDoors", "Enter number of doors");
+                 "1 - Blue\n2 - White\n3 - Red\n4 - Yellow"); 
             return dicParams;
         }
         public override Dictionary<string, string> InitValues(Dictionary<string, string> i_DicValues)
@@ -83,15 +72,17 @@ namespace GarageLogic
         }
         public override string ToString()
         {
-            string str = $"Car color: {CarColor}\n Num of doors: {NumOfDoors}\n";
-            StringBuilder stringBuilder = new StringBuilder(base.ToString());
-            stringBuilder.Append(str);
-            return str;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.AppendLine("=========== Car Details ==========");
+            stringBuilder.Append($"Car color: {CarColor}\n Num of doors: {NumOfDoors}\n");
+            stringBuilder.Append(base.ToString());
+            stringBuilder.AppendLine("====================================");
+            return stringBuilder.ToString();
         }
     }
     public enum eCarColor
     {
-        Blue = 1, White, Red, Yellow
+        Blue = 1, White = 2, Red = 3, Yellow =4
     }
     public enum eNumOfDoors
     {

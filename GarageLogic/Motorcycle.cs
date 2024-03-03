@@ -18,7 +18,7 @@ namespace GarageLogic
 
         public override void SetWheels()
         {
-            for (int i = 0; i <= NumOfWheels; i++)
+            for (int i = 0; i < NumOfWheels; i++)
             {
                 VehicleWheel Wheel = new VehicleWheel(k_MaxPressureMotorcycle);
                 Wheels.Add(Wheel);
@@ -41,24 +41,20 @@ namespace GarageLogic
                     break;
             }
         }
-        public override string PrintParameters()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(base.PrintParameters());
-            sb.AppendLine("LicenceType,EngineCapacity");
-            return sb.ToString();
-        }
+
         public override string ToString()
         {
-            string str = $"Licence Type: {LicenceType}\n Engine Capacity: {EngineCapacity}\n";
-            StringBuilder stringBuilder = new StringBuilder(base.ToString());
-            stringBuilder.Append(str);
-            return str;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.AppendLine("======= Motorcycle Details =========");
+            stringBuilder.Append($"Licence Type: {LicenceType}\n Engine Capacity: {EngineCapacity}\n");
+            stringBuilder.Append(base.ToString());
+            stringBuilder.AppendLine("====================================");
+            return stringBuilder.ToString();
         }
         public override Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = base.GenerateParamsOutputs();
-            dicParams.Add("LicenceType", "Enter licence type");
+            dicParams.Add("LicenceType", "Enter licence type\n1:A1\n2:A2\n3:AB\n4:B2");
             dicParams.Add("EngineCapacity", "Enter engine capacity");
             
             return dicParams;
@@ -83,7 +79,7 @@ namespace GarageLogic
             }
             if (i_DicValues.ContainsKey("EngineCapacity"))
             {
-                isValidCapacity = Enum.TryParse(i_DicValues["EngineCapacity"], out capacity);
+                isValidCapacity = int.TryParse(i_DicValues["EngineCapacity"], out capacity);
                 if (!isValidCapacity)
                 {
                     errors.Add("EngineCapacity", "please enter a valid engine capacity");
@@ -99,6 +95,6 @@ namespace GarageLogic
     }
      public enum eLiceneceType
     {
-        A1,A2,AB,B2
+        A1=1,A2=2,AB=3,B2=4
     } 
 }
