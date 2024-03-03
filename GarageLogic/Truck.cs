@@ -17,19 +17,23 @@ namespace GarageLogic
 
         public override void SetWheels()
         {
-            for (int i = 0; i <= NumOfWheels; i++)
+            for (int i = 0; i < NumOfWheels; i++)
             {
                 VehicleWheel Wheel = new VehicleWheel(k_MaxPressureTruck);
                 Wheels.Add(Wheel);
             }
         }
+
         public override string ToString()
         {
-            string str = $"Carriage Capacity: {CarriageCapacity}\n is there Dangerous Materials : {isDangerousMaterials}\n";
-            StringBuilder stringBuilder = new StringBuilder(base.ToString());
-            stringBuilder.Append(str);
-            return str;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.AppendLine("=========== Truck Details ==========");
+            stringBuilder.Append($"Carriage Capacity: {CarriageCapacity}\n is there Dangerous Materials : {isDangerousMaterials}\n");
+            stringBuilder.Append(base.ToString());
+            stringBuilder.AppendLine("====================================");
+            return stringBuilder.ToString();
         }
+
         public override void SetEngine(eEngineType i_EngineType)
         {
             FuelEngine FEngine = new FuelEngine();
@@ -37,13 +41,7 @@ namespace GarageLogic
             FEngine.MaxAmount = k_MaxFuelTruck;
             this.Engine = FEngine;
         }
-        public override string PrintParameters()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(base.PrintParameters());
-            sb.AppendLine("isDangerousMaterials,CarriageCapacity");
-            return sb.ToString();
-        }
+        
         public override Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = base.GenerateParamsOutputs();
@@ -55,6 +53,7 @@ namespace GarageLogic
 
             return dicParams;
         }
+
         public override Dictionary<string, string> InitValues(Dictionary<string, string> i_DicValues)
         {
             bool isValidDangerous, isValidCarriage, isDangerous;

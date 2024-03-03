@@ -9,7 +9,7 @@ namespace GarageLogic
     public class VehicleWheel
     {
         public string Manufacturer { get; set; }
-        public float CurrentAirPressure { get; private set;}
+        public float CurrentAirPressure { get; set; }
         public readonly float MaxAirPressure;
 
         public VehicleWheel(float i_MaxAirPressure)
@@ -25,11 +25,12 @@ namespace GarageLogic
                 CurrentAirPressure = MaxAirPressure;
             }
         }
-        public virtual string PrintParameters()
+
+        public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Manufacturer,CurrentAirPressure,MaxAirPressure");
-            return sb.ToString();
+            string str = $"Manufacturer: {Manufacturer}\nCurrent Air Pressure: {CurrentAirPressure}\n"
+                + $"Max Air Preesure: {MaxAirPressure}";
+            return str;
         }
     }
 }

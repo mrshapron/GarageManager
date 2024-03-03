@@ -30,9 +30,12 @@ namespace GarageLogic
         }
         public List<ContactData> ContactsByStatus(eVehicleStatus i_Status)
         {
-            return (Contacts.Where((contact) => contact.VehicleStatus == i_Status ||
-                    contact.VehicleStatus == eVehicleStatus.None).ToList());
+            List<ContactData> filteredContacts = Contacts.Where(
+                (contact) => contact.VehicleStatus.Equals(i_Status) ||
+                    i_Status.Equals(eVehicleStatus.None)).ToList();
+            return filteredContacts;
         }
+
         public bool ChangeVehicleStatus(eVehicleStatus i_Status,string i_LicenceNumber)
         {
             bool found = false;
@@ -44,6 +47,7 @@ namespace GarageLogic
             }
             return found;
         }
+
         public bool InflateVehicle(string i_LicenceNumber)
         {
             bool found = false;
@@ -56,6 +60,7 @@ namespace GarageLogic
             }
             return found;
         }
+
         private Vehicle findVehicleByLicense(string i_LicenceNumber)
         {
             Vehicle vehicle = null;
@@ -69,7 +74,8 @@ namespace GarageLogic
             }
             return vehicle;
         }
-        public bool FuelVehicle(string i_LicenceNumber, float i_NumOfLitters, eFuelType i_fuelType)
+
+        public bool FuelVehicle(string i_LicenceNumber, float i_NumOfLitters, eFuelType i_FuelType)
         {
             bool found = false;
             Vehicle vechicle = findVehicleByLicense(i_LicenceNumber);
@@ -77,10 +83,11 @@ namespace GarageLogic
             {
                 found = true;
                 FuelEngine fuelEngine = vechicle.Engine as FuelEngine;
-                fuelEngine.GetFuel(i_NumOfLitters, i_fuelType);
+                fuelEngine.GetFuel(i_NumOfLitters, i_FuelType);
             }
             return found;
         }
+
         public bool ChargeVehicle(string i_LicenceNumber, float i_NumOfMinutes)
         {
             bool found = false;
@@ -93,10 +100,16 @@ namespace GarageLogic
             }
             return found;
         }
+
         public string GetVehicleData(string i_LicenceNumber)
         {
+            string vehicleData = null;
             ContactData cd = FindContactByLicense(i_LicenceNumber);
-            return cd.ToString();
+            if(cd != null)
+            {
+                vehicleData = cd.ToString();
+            }
+            return vehicleData;
         }
     }
 }

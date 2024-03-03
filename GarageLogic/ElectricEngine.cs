@@ -10,11 +10,12 @@ namespace GarageLogic
     {
         public void ChargeBattery(float i_HoursCharge)
         {
-            this.CurrentAmount = i_HoursCharge;
-            if (this.CurrentAmount > this.MaxAmount)
+            CurrentAmount = i_HoursCharge;
+            if (CurrentAmount + i_HoursCharge > MaxAmount)
             {
-                this.CurrentAmount = this.MaxAmount;
+                throw new ValueOutOfRangeException("Hours of Charge", 0, MaxAmount);
             }
+            CurrentAmount += i_HoursCharge;
         }
     }
 }

@@ -24,22 +24,13 @@ namespace GarageLogic
             NumOfWheels = i_NumOfWheels;
         }
 
-        public virtual string PrintParameters()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("NumOfWheels,ModelName,LicenceNumber,RemainingBatteryPrecent,Engine:");
-            sb.AppendLine(Engine.PrintParameters());
-            sb.AppendLine("Wheels:");
-            // sb.AppendLine(VehicleWheel.PrintParameters());
-            return sb.ToString();
-        }
-
         public virtual Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = new Dictionary<string, string>
             {
-                { "ModelName", string.empty },
-
+                { "ModelName", "Enter model of the vehicle" },
+                { "WheelManufactur", "Enter Wheel Manufactur" },
+                { "WheelCurrentAirPressure", "Please Enter Current air prresure in wheels" },
             };
 
             dicParams = dicParams.Union(Engine.GenerateParamsOutputs()).
@@ -47,30 +38,52 @@ namespace GarageLogic
 
             return dicParams;
         }
-
         public virtual Dictionary<string, string> InitValues(Dictionary<string, string> i_DicValues)
         {
+            Dictionary<string, string> errors = Engine.InitValues(i_DicValues);
             if (i_DicValues.ContainsKey("ModelName"))
             {
                 ModelName = i_DicValues["ModelName"];
             }
-            Dictionary<string, string> errors = Engine.InitValues(i_DicValues);
+            foreach (VehicleWheel wheel in Wheels)
+            {
+                if (i_DicValues.ContainsKey("WheelManufactur"))
+                {
+                    wheel.Manufacturer = i_DicValues["WheelManufactur"];
+                }
+                if (i_DicValues.ContainsKey("WheelCurrentAirPressure"))
+                {
+                    if (float.TryParse(i_DicValues["WheelCurrentAirPressure"], out float airPressure))
+                    {
+                        if (airPressure <= wheel.MaxAirPressure) { wheel.CurrentAirPressure = airPressure; }
+                        else 
+                        { 
+                            if(!errors.ContainsKey("WheelCurrentAirPressure"))
+                                errors.Add("WheelCurrentAirPressure", $"Please enter air pressure less than Max : {wheel.MaxAirPressure}");
+                        }
+                    }
+                    else
+                    {
+                        if (!errors.ContainsKey("WheelCurrentAirPressure"))
+                            errors.Add("WheelCurrentAirPressure", "Please enter valid wheel Air Pressure");
+                    }
+                }
+            }
             return errors;
 
         }
         public override string ToString()
         {
             int count = 1;
-            string str = $"Licence Number: {LicenceNumber}\n Model Name: {ModelName}\n Num of wheels:{NumOfWheels}";
-
-            StringBuilder stringBuilder = new StringBuilder(str);
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.AppendLine($"Licence Number: {LicenceNumber}\n Model Name: {ModelName}\n Num of wheels:{NumOfWheels}");
             foreach (VehicleWheel wheel in Wheels)
             {
-                stringBuilder.Append($"wheel {count++}:\n");
-                stringBuilder.Append($"{wheel}\n");
+                stringBuilder.AppendLine($"wheel {count++}:\n");
+                stringBuilder.AppendLine($"{wheel}\n");
             }
             stringBuilder.Append("Engine: \n");
-            stringBuilder.Append(Engine);
+            stringBuilder.AppendLine(Engine.ToString());
 
             return stringBuilder.ToString();
         }

@@ -11,12 +11,6 @@ namespace GarageLogic
         public float CurrentAmount { get; set; }
         public float MaxAmount { get; set; }
 
-        public virtual string PrintParameters()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("CurrentAmount,MaxAmount");
-            return sb.ToString();
-        }
         public virtual Dictionary<string, string> GenerateParamsOutputs()
         {
             Dictionary<string, string> dicParams = new Dictionary<string, string>
@@ -28,7 +22,6 @@ namespace GarageLogic
         }
         public override string ToString()
         {
-            
             string str = $"Current amount: {CurrentAmount}\n Max amount: {MaxAmount}\n";
             return str;
         }
